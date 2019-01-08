@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Digital Paper</string>
+    <string-array name="drawer_item_array">
+        <item>Home</item>
+        <item>About</item>
+        <item>Exit</item>
+    </string-array>
+    <string name="facebook_app_id">593742447736174</string>
+    <string name="fb_login_protocol_scheme">fb593742447736174</string>
+
+    <string name="no_internet">fb502273986930193</string>
+    <string name="description">I am Amir Hossain,I am a software developer.I love programming especially, Android development</string>
+</resources>
