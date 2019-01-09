@@ -1,11 +1,14 @@
 package amir.digital.paper.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,9 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import amir.digital.paper.DetailsActivity;
 import amir.digital.paper.Mnanger.StaticDataManager;
 import amir.digital.paper.R;
-import amir.digital.paper.TempDetailsActivity;
 import amir.digital.paper.adapter.HomeAdapter;
 import amir.digital.paper.model.NewsModel;
 import amir.digital.paper.other.InternetConnection;
@@ -101,13 +104,44 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
 
     @Override
     public void onNewsClick(NewsModel.Article article) {
-        Intent intent = new Intent(getContext(), TempDetailsActivity.class);
-        intent.putExtra(StaticDataManager.article_key, article);
-        startActivity(intent);
+        showAlertDialog(article.getUrl(),article.getTitle());
     }
 
     public void onListTypeChange(int columnCount){
         layoutManager.setSpanCount(columnCount);
         recyclerView_vertical.setLayoutManager(layoutManager);
+    }
+
+    private void showAlertDialog(final String url, final String title) {
+        AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+        builder.setTitle("Load content")
+                .setMessage("Do you want to load content in browser?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        runActivity(browserIntent);
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent=new Intent(getContext(),DetailsActivity.class);
+                        intent.putExtra(StaticDataManager.url_key,url);
+                        intent.putExtra(StaticDataManager.title_key,title);
+                        runActivity(intent);
+                    }
+                })
+                .setIcon(R.drawable.ic_about)
+                .setCancelable(false)
+                .show();
+
+    }
+
+    private void runActivity(Intent intent) {
+        if(InternetConnection.isNetworkConnected(getContext())){
+            startActivity(intent);
+        }else {
+            InternetConnection.showError(getContext());
+        }
     }
 }

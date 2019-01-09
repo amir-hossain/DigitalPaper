@@ -1,12 +1,15 @@
 package amir.digital.paper;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,6 +17,7 @@ import android.view.MenuItem;
 
 import amir.digital.paper.Mnanger.StaticDataManager;
 import amir.digital.paper.fragment.HomeFragment;
+import amir.digital.paper.other.InternetConnection;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private MenuItem gridOn;
@@ -159,14 +163,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bundle.putInt(StaticDataManager.column_count_key, columnCount);
         fragment.setArguments(bundle);
     }
-
-    private void showLastVisibleListIcon() {
-        if (visibleListIcon != null) {
-            visibleListIcon.setVisible(true);
-        }
-    }
-
-
 }
 
 

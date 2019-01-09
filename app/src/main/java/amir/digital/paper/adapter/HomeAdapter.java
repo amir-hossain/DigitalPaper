@@ -25,10 +25,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     private ArrayList<NewsModel.Article> newsList;
     private NewsClickListener listener;
 
-    public HomeAdapter(Context context,ArrayList<NewsModel.Article> newsList,NewsClickListener listener) {
+    public HomeAdapter(Context context, ArrayList<NewsModel.Article> newsList, NewsClickListener listener) {
         this.newsList = newsList;
         this.context = context;
-        this.listener=listener;
+        this.listener = listener;
     }
 
     @Override
@@ -46,15 +46,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         holder.description.setText(model.getDescription());
         holder.author.setText(model.getAuthor());
         holder.url.setText(model.getUrl());
-        if (model.getPublishTime()==null|| model.getPublishTime().isEmpty()) {
+        if (model.getPublishTime() == null || model.getPublishTime().isEmpty()) {
             holder.date.setText("");
         } else {
-
-            String date=parseDate(model.getPublishTime());
+            String date = parseDate(model.getPublishTime());
             holder.date.setText(date);
+
         }
 
-        if (model.getImage()!=null) {
+        if (model.getImage() != null) {
 
             Glide.with(context)
                     .load(model.getImage())
@@ -72,13 +72,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     private String parseDate(String unFormattedDate) {
         try {
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-            Date date=df.parse(unFormattedDate);
-            df=new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-            String d=df.format(date);
+            DateFormat df;
+            if (unFormattedDate.endsWith("Z")) {
+                df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            } else {
+                df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            }
+
+            Date date = df.parse(unFormattedDate);
+            df = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
+            String d = df.format(date);
             return d;
         } catch (ParseException e) {
-            Log.i("f","f");
+            Log.i("f", "f");
         }
         return null;
     }
@@ -91,7 +97,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, author,url;
+        TextView title, author, url;
         TextView date;
         TextView description;
         View itemView;
@@ -100,17 +106,17 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
         public MyViewHolder(View view) {
             super(view);
-            itemView=view;
-            title =view.findViewById(R.id.txt_title);
-            author =view.findViewById(R.id.athor);
-            url =view.findViewById(R.id.url);
-            date =view.findViewById(R.id.txt_date);
-            description =view.findViewById(R.id.txt_description);
-            image =view.findViewById(R.id.img_article);
+            itemView = view;
+            title = view.findViewById(R.id.txt_title);
+            author = view.findViewById(R.id.athor);
+            url = view.findViewById(R.id.url);
+            date = view.findViewById(R.id.txt_date);
+            description = view.findViewById(R.id.txt_description);
+            image = view.findViewById(R.id.img_article);
         }
     }
 
-    public interface NewsClickListener{
+    public interface NewsClickListener {
         void onNewsClick(NewsModel.Article article);
     }
 
