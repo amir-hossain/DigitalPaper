@@ -7,7 +7,6 @@
     </string-array>
     <string name="facebook_app_id">593742447736174</string>
     <string name="fb_login_protocol_scheme">fb593742447736174</string>
-
-    <string name="no_internet">fb502273986930193</string>
-    <string name="description">I am Amir Hossain,I am a software developer.I love programming especially, Android development</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

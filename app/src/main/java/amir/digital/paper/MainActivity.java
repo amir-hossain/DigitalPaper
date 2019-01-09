@@ -2,8 +2,10 @@ package amir.digital.paper;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,24 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import amir.digital.paper.Mnanger.StaticDataManager;
-import amir.digital.paper.adapter.DrawerItemAdapter;
-import amir.digital.paper.fragment.AboutFragment;
 import amir.digital.paper.fragment.HomeFragment;
-import amir.digital.paper.model.DrawerItemModel;
 
-public class MainActivity extends AppCompatActivity {
-
-    private String[] drawerItemTitles;
-    private DrawerLayout drawerLayout;
-    private ListView drawerList;
-    private Toolbar toolbar;
-    private ActionBarDrawerToggle drawerToggle;
-    private ActionBar actionBar;
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private MenuItem gridOn;
     private MenuItem gridOff;
     private MenuItem visibleListIcon;
@@ -42,54 +32,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        drawerItemTitles = getResources().getStringArray(R.array.drawer_item_array);
-        drawerList = findViewById(R.id.left_drawer);
-        fragmentManager = getSupportFragmentManager();
 
 
-        setupToolbar();
 
-        DrawerItemModel[] drawerItem = new DrawerItemModel[3];
-
-        drawerItem[0] = new DrawerItemModel(R.drawable.ic_home, "Home");
-        drawerItem[1] = new DrawerItemModel(R.drawable.ic_about, "About");
-        drawerItem[2] = new DrawerItemModel(R.drawable.ic_exit, "Exit");
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        DrawerItemAdapter adapter = new DrawerItemAdapter(this, R.layout.list_view_drawer, drawerItem);
-        drawerList.setAdapter(adapter);
-        drawerList.setOnItemClickListener(new DrawerItemClickListener());
-        drawerLayout = findViewById(R.id.drawer_layout);
-        drawerLayout.addDrawerListener(drawerToggle);
-        int color=getResources().getColor(R.color.colorAccent);
-
-
-        setupDrawerToggle();
-        drawerItemSelect(0);
-    }
-
-
-    private void setupToolbar() {
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar =findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
+
+        DrawerLayout drawer =findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView =findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.all);
+        fragmentManager=getSupportFragmentManager();
+        fragment=new HomeFragment();
+        passDataToFragment();
+        fragmentManager.beginTransaction().replace(R.id.content_frame,fragment).commit();
+
+
     }
 
-    private void setupDrawerToggle() {
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
-        drawerToggle.syncState();
-    }
 
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            drawerItemSelect(position);
-        }
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -104,10 +70,33 @@ public class MainActivity extends AppCompatActivity {
                 ((HomeFragment) fragment).onListTypeChange(2);
                 columnCount = 2;
                 break;
+            case R.id.about:
+                startActivity(new Intent(this,AboutActivity.class));
         }
 
         return true;
 
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.all:
+                showLastVisibleListIcon();
+                fragment = new HomeFragment();
+                passDataToFragment();
+                break;
+            case R.id.logout:
+                finish();
+                break;
+
+        }
+
+        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        DrawerLayout drawer =findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     private void showGridOnIcon() {
@@ -132,40 +121,11 @@ public class MainActivity extends AppCompatActivity {
             visibleListIcon = gridOff;
         }
 
-
         return true;
     }
 
 
-    private void drawerItemSelect(int position) {
-        switch (position) {
-            case 0:
-                showLastVisibleListIcon();
-                fragment = new HomeFragment();
-                passDataToFragment();
-                break;
-            case 1:
-                visibleListIcon.setVisible(false);
-                fragment = new AboutFragment();
-                break;
-            case 2:
-                finish();
-                break;
 
-            default:
-                fragment = new HomeFragment();
-                break;
-        }
-
-
-            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-            drawerList.setItemChecked(position, true);
-            drawerList.setSelection(position);
-            setTitle(drawerItemTitles[position]);
-            drawerLayout.closeDrawer(drawerList);
-
-    }
 
     private void passDataToFragment() {
         bundle = new Bundle();
@@ -180,15 +140,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void setTitle(CharSequence title) {
-        getSupportActionBar().setTitle(title);
-    }
-
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
-    }
 
 }
+
+

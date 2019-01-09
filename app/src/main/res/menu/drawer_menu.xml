@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:title="Category">
+        <menu >
+            <group
+                android:id="@+id/category"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/all"
+                    android:icon="@drawable/ic_all"
+                    android:title="All" />
+            </group>
+        </menu>
+    </item>
+    <group
+        android:id="@+id/other"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout" />
+    </group>
+
+</menu>
