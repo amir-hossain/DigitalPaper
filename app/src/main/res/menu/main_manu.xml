@@ -23,4 +23,11 @@
         android:title="About"
         app:showAsAction="never"
         android:visible="true"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_exit"
+        android:orderInCategory="@android:integer/config_shortAnimTime"
+        android:title="Logout"
+        android:visible="true"
+        app:showAsAction="never" />
 </menu>

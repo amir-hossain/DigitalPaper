@@ -14,19 +14,20 @@ public class StaticDataManager {
 
 
 //    news source name
-    public static final String abc_news ="abc-news";
-    public static final String abc_news_au ="abc-news-au";
-    public static final String al_jazeera_english ="al-jazeera-english";
-    public static final String ars_technica ="ars-technica";
-    public static final String australian_financial_review ="australian-financial-review";
-    public static final String axios ="axios";
+    public static final String google_news ="google-news";
+    public static final String ign ="ign";
+    public static final String buzzfeed ="buzzfeed";
+    public static final String mtv_news ="mtv-news";
+    public static final String medical_news ="medical-news-today";
     public static final String bbc_news ="bbc-news";
     public static final String bbc_sport ="bbc-sport";
-    public static final String bleacher_report ="bleacher-report";
-    public static final String associated_press ="associated-press";
+    public static final String techh_crunch ="techcrunch";
+    public static final String polygon ="polygon";
+    public static final String espn ="espn";
+    public static final String nat_geo ="national-geographic";
+    public static final String tnw ="the-next-web";
 
 //    base url
     public static final String news_api_base_url ="https://newsapi.org/v2/";
-    public static final String number_api_base_url ="http://numbersapi.com/";
     public static String logged_in_key="loggedIn";
 }

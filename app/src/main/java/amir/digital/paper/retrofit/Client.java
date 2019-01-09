@@ -12,9 +12,4 @@ public interface Client {
     @GET("top-headlines")
     Call<NewsModel> getTopNewsBySource(@Query("sources") String sourceName, @Query("apiKey") String apikey);
 
-    @GET("{number}/trivia")
-    Call<ResponseBody> getNumberTrivia(@Path("number") String number);
-
-    @GET("{dateInput}/date")
-    Call<ResponseBody> getDateTrivia(@Path("dateInput") String date);
 }

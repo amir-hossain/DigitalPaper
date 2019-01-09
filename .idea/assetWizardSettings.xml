@@ -14,8 +14,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_all" />
-                            <entry key="sourceFile" value="C:\Users\Amir\Desktop\New Text Document.svg" />
+                            <entry key="height" value="288" />
+                            <entry key="outputName" value="ic_mnt" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\Amir\Desktop\generated (9).svg" />
+                            <entry key="width" value="700" />
                           </map>
                         </option>
                       </PersistentState>

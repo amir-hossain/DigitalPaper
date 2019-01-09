@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:title="Category">
-        <menu >
-            <group
-                android:id="@+id/category"
-                android:checkableBehavior="single">
+    <group
+        android:id="@+id/category"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/saved"
+            android:icon="@drawable/ic_saved"
+            android:title="Saved" />
+    </group>
+    <item
+        android:id="@+id/general"
+        android:title="GENERAL">
+
+        <menu>
+            <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/all"
-                    android:icon="@drawable/ic_all"
-                    android:title="All" />
+                    android:id="@+id/google_news"
+                    android:icon="@drawable/ic_g_news"
+                    android:title="Google News" />
+                <item
+                    android:id="@+id/bbc_news"
+                    android:icon="@drawable/ic_bbc"
+                    android:title="BBC News" />
             </group>
         </menu>
     </item>
-    <group
-        android:id="@+id/other"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/logout"
-            android:icon="@drawable/ic_exit"
-            android:title="Logout" />
-    </group>
+    <item
+        android:id="@+id/entertainment"
+        android:title="ENTERTAINMENT">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/buzzfeed"
+                    android:icon="@drawable/ic_buzzfeed"
+                    android:title="Buzzfeed" />
+                <item
+                    android:id="@+id/mtv_news"
+                    android:icon="@drawable/ic_mtv"
+                    android:title="MTV News" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/sports"
+        android:title="SPORTS">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/bbc_sports"
+                    android:icon="@drawable/ic_bbc_sport"
+                    android:title="BBC Sports" />
+                <item
+                    android:id="@+id/espn"
+                    android:icon="@drawable/ic_espn"
+                    android:title="ESPN" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/science"
+        android:title="SCIENCE">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/medical_news"
+                    android:icon="@drawable/ic_mnt"
+                    android:title="Medical News Today" />
+                <item
+                    android:id="@+id/nat_geo"
+                    android:icon="@drawable/ic_net_geo"
+                    android:title="National Geographic" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/technology"
+        android:title="TECHNOLOGY">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/tnw"
+                    android:icon="@drawable/ic_tnw"
+                    android:title="The Next Web" />
+                <item
+                    android:id="@+id/tech_crunch"
+                    android:icon="@drawable/ic_techchrunch"
+                    android:title="TechCrunch" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/gaming"
+        android:title="GAMING">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/ign"
+                    android:icon="@drawable/ic_ign"
+                    android:title="IGN" />
+                <item
+                    android:id="@+id/polygon"
+                    android:icon="@drawable/ic_polygon"
+                    android:title="Polygon" />
+            </group>
+        </menu>
+    </item>
+
 
 </menu>
