@@ -1,58 +1,63 @@
 package amir.digital.paper;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.FragmentManager;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import amir.digital.paper.Mnanger.StaticDataManager;
 import amir.digital.paper.fragment.HomeFragment;
-import amir.digital.paper.other.InternetConnection;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.OnItemSelected;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private MenuItem gridOn;
     private MenuItem gridOff;
-    private MenuItem visibleListIcon;
     private HomeFragment fragment;
     private int columnCount = 2;
     private Bundle bundle;
     private FragmentManager fragmentManager;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawer;
+
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.google_news);
+
         fragmentManager = getSupportFragmentManager();
         fragment = new HomeFragment();
         passDataToFragment();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-
     }
 
 
@@ -61,12 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.grid_off:
                 showGridOnIcon();
-                ((HomeFragment) fragment).onListTypeChange(1);
+                fragment.onListTypeChange(1);
                 columnCount = 1;
                 break;
             case R.id.grid_on:
                 showGridOffIcon();
-                ((HomeFragment) fragment).onListTypeChange(2);
+                fragment.onListTypeChange(2);
                 columnCount = 2;
                 break;
             case R.id.about:
@@ -127,7 +132,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -135,13 +139,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void showGridOnIcon() {
         gridOff.setVisible(false);
         gridOn.setVisible(true);
-        visibleListIcon = gridOn;
+
     }
 
     private void showGridOffIcon() {
         gridOff.setVisible(true);
         gridOn.setVisible(false);
-        visibleListIcon = gridOff;
     }
 
     @Override
@@ -151,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         gridOn = menu.findItem(R.id.grid_on);
         if (gridOff != null) {
             gridOff.setVisible(true);
-            visibleListIcon = gridOff;
+
         }
 
         return true;
@@ -163,6 +166,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bundle.putInt(StaticDataManager.column_count_key, columnCount);
         fragment.setArguments(bundle);
     }
+
+
 }
 
 

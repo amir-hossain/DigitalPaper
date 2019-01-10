@@ -4,18 +4,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import amir.digital.paper.DetailsActivity;
 import amir.digital.paper.Mnanger.StaticDataManager;
@@ -25,12 +26,13 @@ import amir.digital.paper.model.NewsModel;
 import amir.digital.paper.other.InternetConnection;
 import amir.digital.paper.retrofit.Client;
 import amir.digital.paper.retrofit.RetrofitInstance;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListener {
+public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListener,HomeAdapter.SaveClickListener,HomeAdapter.ShareClickListener {
     private static Retrofit retrofit = RetrofitInstance.getInstance();
     private static Client client = retrofit.create(Client.class);
     private RecyclerView recyclerView_vertical;
@@ -81,7 +83,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
                             Log.i("res", response.body() + "");
                             recyclerView_vertical
                                     .setAdapter(new HomeAdapter(getContext(), response.body()
-                                            .getArticles(), HomeFragment.this));
+                                            .getArticles(), HomeFragment.this,HomeFragment.this,HomeFragment.this));
                             swipe_refresh_layout.setRefreshing(false);
 
                         }
@@ -143,5 +145,16 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
         }else {
             InternetConnection.showError(getContext());
         }
+    }
+
+
+    @Override
+    public void onSaveClick(NewsModel.Article article) {
+        Toast.makeText(getContext(),"save",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onShareClick(NewsModel.Article article) {
+        Toast.makeText(getContext(),"Share",Toast.LENGTH_SHORT).show();
     }
 }

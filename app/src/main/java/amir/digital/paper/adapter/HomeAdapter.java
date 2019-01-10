@@ -1,7 +1,8 @@
 package amir.digital.paper.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,16 +20,23 @@ import java.util.Date;
 
 import amir.digital.paper.R;
 import amir.digital.paper.model.NewsModel;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
     Context context;
     private ArrayList<NewsModel.Article> newsList;
-    private NewsClickListener listener;
+    private NewsClickListener newsClickListener;
+    private SaveClickListener saveClickListener;
+    private ShareClickListener shareClickListener;
+    private NewsModel.Article model;
 
-    public HomeAdapter(Context context, ArrayList<NewsModel.Article> newsList, NewsClickListener listener) {
-        this.newsList = newsList;
+    public HomeAdapter(Context context, ArrayList<NewsModel.Article> newsList, NewsClickListener newsClickListener, SaveClickListener saveClickListener, ShareClickListener shareClickListener) {
         this.context = context;
-        this.listener = listener;
+        this.newsList = newsList;
+        this.newsClickListener = newsClickListener;
+        this.saveClickListener = saveClickListener;
+        this.shareClickListener = shareClickListener;
     }
 
     @Override
@@ -36,22 +44,26 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_news, parent, false);
 
+
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        final NewsModel.Article model = newsList.get(position);
+        model = newsList.get(position);
+
         holder.title.setText(model.getTitle());
+
         holder.description.setText(model.getDescription());
-        holder.author.setText(model.getAuthor());
+        if(model.getAuthor()!=null){
+            holder.author.setText(model.getAuthor());
+        }
+
         holder.url.setText(model.getUrl());
-        if (model.getPublishTime() == null || model.getPublishTime().isEmpty()) {
-            holder.date.setText("");
-        } else {
+
+        if (model.getPublishTime() !=null) {
             String date = parseDate(model.getPublishTime());
             holder.date.setText(date);
-
         }
 
         if (model.getImage() != null) {
@@ -65,10 +77,28 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        listener.onNewsClick(model);
+                        newsClickListener.onNewsClick(model);
+                    }
+                });
+
+        holder.save
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        saveClickListener.onSaveClick(model);
+                    }
+                });
+
+        holder.share
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        shareClickListener.onShareClick(model);
                     }
                 });
     }
+
+
 
     private String parseDate(String unFormattedDate) {
         try {
@@ -97,27 +127,63 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, author, url;
+        @BindView(R.id.txt_title)
+        TextView title;
+
+        @BindView(R.id.athor)
+        TextView author;
+
+        @BindView(R.id.url)
+        TextView url;
+
+        @BindView(R.id.txt_date)
         TextView date;
+
+        @BindView(R.id.txt_description)
         TextView description;
+
         View itemView;
+
+        @BindView(R.id.img_article)
         ImageView image;
+
+        @BindView(R.id.save)
+        ImageView save;
+
+        @BindView(R.id.share)
+        ImageView share;
+
+
 
 
         public MyViewHolder(View view) {
             super(view);
+            ButterKnife.bind(this,view);
             itemView = view;
-            title = view.findViewById(R.id.txt_title);
-            author = view.findViewById(R.id.athor);
-            url = view.findViewById(R.id.url);
-            date = view.findViewById(R.id.txt_date);
-            description = view.findViewById(R.id.txt_description);
-            image = view.findViewById(R.id.img_article);
+
         }
     }
 
+//    @OnClick(R.id.save)
+//    void save(){
+//
+//    }
+//
+//    @OnClick(R.id.share)
+//    void share(){
+//
+//    }
+
     public interface NewsClickListener {
         void onNewsClick(NewsModel.Article article);
+    }
+
+    public interface SaveClickListener {
+        void onSaveClick(NewsModel.Article article);
+    }
+
+    public interface ShareClickListener {
+        void onShareClick(NewsModel.Article article);
     }
 
 }
