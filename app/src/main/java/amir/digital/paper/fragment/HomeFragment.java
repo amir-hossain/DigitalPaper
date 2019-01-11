@@ -117,15 +117,15 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
     private void showAlertDialog(final String url, final String title) {
         AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
         builder.setTitle("Load content")
-                .setMessage("Do you want to load content in browser?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                .setMessage("Where do you want to load content ?")
+                .setPositiveButton("Browser", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                         runActivity(browserIntent);
 
                     }
                 })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                .setNegativeButton("WebView", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent=new Intent(getContext(),DetailsActivity.class);
                         intent.putExtra(StaticDataManager.url_key,url);
@@ -134,7 +134,6 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
                     }
                 })
                 .setIcon(R.drawable.ic_about)
-                .setCancelable(false)
                 .show();
 
     }

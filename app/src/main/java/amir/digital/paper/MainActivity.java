@@ -89,9 +89,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.saved:
-                
-                break;
             case R.id.google_news:
                 fragment.showNews(StaticDataManager.google_news);
                 break;

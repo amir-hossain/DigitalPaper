@@ -81,21 +81,21 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
                     }
                 });
 
-        holder.save
-                .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        saveClickListener.onSaveClick(model);
-                    }
-                });
-
-        holder.share
-                .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        shareClickListener.onShareClick(model);
-                    }
-                });
+//        holder.save
+//                .setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        saveClickListener.onSaveClick(model);
+//                    }
+//                });
+//
+//        holder.share
+//                .setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        shareClickListener.onShareClick(model);
+//                    }
+//                });
     }
 
 
@@ -147,11 +147,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         @BindView(R.id.img_article)
         ImageView image;
 
-        @BindView(R.id.save)
-        ImageView save;
-
-        @BindView(R.id.share)
-        ImageView share;
+//        @BindView(R.id.save)
+//        ImageView save;
+//
+//        @BindView(R.id.share)
+//        ImageView share;
 
 
 

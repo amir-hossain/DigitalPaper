@@ -104,51 +104,16 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:ellipsize="end"
             android:gravity="left"
             android:maxLines="3"
             android:text="test"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/img_article" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/backgroundColor"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/txt_description" />
-
-        <ImageView
-            android:id="@+id/save"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            card_view:layout_constraintEnd_toStartOf="@+id/share"
-            card_view:layout_constraintHorizontal_chainStyle="spread"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/view"
-            card_view:srcCompat="@drawable/ic_saved" />
-
-        <ImageView
-            android:id="@+id/share"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toEndOf="@+id/save"
-            card_view:layout_constraintTop_toBottomOf="@+id/view"
-            card_view:srcCompat="@drawable/ic_share" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
