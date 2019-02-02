@@ -1,44 +1,45 @@
 package amir.digital.paper.fragment;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
+import amir.digital.paper.adapter.NewsAdapter;
+import amir.digital.paper.factory.NewsDataSourceFactory;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.paging.LivePagedListBuilder;
+import androidx.paging.PagedList;
+import androidx.paging.PagedListAdapter;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.List;
+
 import amir.digital.paper.DetailsActivity;
 import amir.digital.paper.Mnanger.StaticDataManager;
 import amir.digital.paper.R;
-import amir.digital.paper.adapter.HomeAdapter;
 import amir.digital.paper.model.NewsModel;
 import amir.digital.paper.other.InternetConnection;
-import amir.digital.paper.retrofit.Client;
-import amir.digital.paper.retrofit.RetrofitInstance;
-import butterknife.OnClick;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 
-public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListener,HomeAdapter.SaveClickListener,HomeAdapter.ShareClickListener {
-    private static Retrofit retrofit = RetrofitInstance.getInstance();
-    private static Client client = retrofit.create(Client.class);
+public class HomeFragment extends Fragment implements NewsAdapter.NewsClickListener,NewsAdapter.SaveClickListener,NewsAdapter.ShareClickListener {
     private RecyclerView recyclerView_vertical;
     private String currentNewsSource = StaticDataManager.google_news;
     private SwipeRefreshLayout swipe_refresh_layout;
     private GridLayoutManager layoutManager;
+    private NewsAdapter newsAdapter;
 
 
     @Nullable
@@ -50,20 +51,27 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
         layoutManager=new GridLayoutManager(getContext(), columnCount);
         recyclerView_vertical.setLayoutManager(layoutManager);
         recyclerView_vertical.setItemAnimator(new DefaultItemAnimator());
+        recyclerView_vertical.setAdapter(newsAdapter);
 
+        newsAdapter=new NewsAdapter(this,this,this);
+
+        recyclerView_vertical.setAdapter(newsAdapter);
+
+        showNews(StaticDataManager.google_news);
 
 
         swipe_refresh_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                swipe_refresh_layout.setRefreshing(true);
+
                 showNews(currentNewsSource);
 
             }
         });
-        showNews(StaticDataManager.google_news);
+//        showNews(StaticDataManager.google_news);
         return view;
     }
+
 
 
     private void initializeView(View view) {
@@ -73,32 +81,16 @@ public class HomeFragment extends Fragment implements HomeAdapter.NewsClickListe
     }
 
     public void showNews(String newsSourceName) {
-        this.currentNewsSource=newsSourceName;
         swipe_refresh_layout.setRefreshing(true);
-        if(InternetConnection.isNetworkConnected(getContext())){
-            client.getTopNewsBySource(newsSourceName, StaticDataManager.news_api_key)
-                    .enqueue(new Callback<NewsModel>() {
-                        @Override
-                        public void onResponse(Call<NewsModel> call, Response<NewsModel> response) {
-                            Log.i("res", response.body() + "");
-                            recyclerView_vertical
-                                    .setAdapter(new HomeAdapter(getContext(), response.body()
-                                            .getArticles(), HomeFragment.this,HomeFragment.this,HomeFragment.this));
-                            swipe_refresh_layout.setRefreshing(false);
+        LivePagedListBuilder<Long,NewsModel.Article> builder=new LivePagedListBuilder(new NewsDataSourceFactory(newsSourceName),10);
+        builder.build().observe(this, new Observer<PagedList<NewsModel.Article>>() {
+            @Override
+            public void onChanged(PagedList<NewsModel.Article> articles) {
 
-                        }
-
-                        @Override
-                        public void onFailure(Call<NewsModel> call, Throwable t) {
-                            Log.i("res", "error");
-                            swipe_refresh_layout.setRefreshing(false);
-                        }
-                    });
-        }else {
-            swipe_refresh_layout.setRefreshing(false);
-            InternetConnection.showError(getContext());
-        }
-
+                newsAdapter.submitList(articles);
+                swipe_refresh_layout.setRefreshing(false);
+            }
+        });
     }
 
 

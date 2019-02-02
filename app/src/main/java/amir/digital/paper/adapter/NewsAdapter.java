@@ -1,6 +1,10 @@
 package amir.digital.paper.adapter;
 
 import android.content.Context;
+
+import androidx.annotation.NonNull;
+import androidx.paging.PagedListAdapter;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -17,23 +21,34 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import amir.digital.paper.R;
 import amir.digital.paper.model.NewsModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
+public class NewsAdapter extends PagedListAdapter<NewsModel.Article,NewsAdapter.MyViewHolder> {
     Context context;
-    private ArrayList<NewsModel.Article> newsList;
+    
     private NewsClickListener newsClickListener;
     private SaveClickListener saveClickListener;
     private ShareClickListener shareClickListener;
-    private NewsModel.Article model;
 
-    public HomeAdapter(Context context, ArrayList<NewsModel.Article> newsList, NewsClickListener newsClickListener, SaveClickListener saveClickListener, ShareClickListener shareClickListener) {
-        this.context = context;
-        this.newsList = newsList;
+    private static DiffUtil.ItemCallback<NewsModel.Article> itemCallback=new DiffUtil.ItemCallback<NewsModel.Article>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull NewsModel.Article oldItem, @NonNull NewsModel.Article newItem) {
+            return oldItem.equals(newItem);
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull NewsModel.Article oldItem, @NonNull NewsModel.Article newItem) {
+            return oldItem.getUrl().equals(newItem.getUrl());
+        }
+    };
+
+    public NewsAdapter(NewsClickListener newsClickListener, SaveClickListener saveClickListener, ShareClickListener shareClickListener) {
+        super(itemCallback);
         this.newsClickListener = newsClickListener;
         this.saveClickListener = saveClickListener;
         this.shareClickListener = shareClickListener;
@@ -45,57 +60,17 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
                 .inflate(R.layout.list_item_news, parent, false);
 
 
+        this.context=parent.getContext();
         return new MyViewHolder(itemView);
     }
 
+
+
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        model = newsList.get(position);
-
-        holder.title.setText(model.getTitle());
-
-        holder.description.setText(model.getDescription());
-        if(model.getAuthor()!=null){
-            holder.author.setText(model.getAuthor());
-        }
-
-        holder.url.setText(model.getUrl());
-
-        if (model.getPublishTime() !=null) {
-            String date = parseDate(model.getPublishTime());
-            holder.date.setText(date);
-        }
-
-        if (model.getImage() != null) {
-
-            Glide.with(context)
-                    .load(model.getImage())
-                    .into(holder.image);
-        }
-
-        holder.itemView
-                .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        newsClickListener.onNewsClick(model);
-                    }
-                });
-
-//        holder.save
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        saveClickListener.onSaveClick(model);
-//                    }
-//                });
-//
-//        holder.share
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        shareClickListener.onShareClick(model);
-//                    }
-//                });
+        NewsModel.Article article=getItem(position);
+        holder.bindTo(article);
+        
     }
 
 
@@ -119,10 +94,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         return null;
     }
 
-    @Override
-    public int getItemCount() {
-        return newsList.size();
-    }
+  
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -161,6 +133,53 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
             ButterKnife.bind(this,view);
             itemView = view;
 
+        }
+
+        public void bindTo(NewsModel.Article article) {
+            title.setText(article.getTitle());
+
+            description.setText(article.getDescription());
+            if(article.getAuthor()!=null){
+                author.setText(article.getAuthor());
+            }
+
+            url.setText(article.getUrl());
+
+            if (article.getPublishTime() !=null) {
+                String date = parseDate(article.getPublishTime());
+                this.date.setText(date);
+            }
+
+            if (article.getImage() != null) {
+
+                Glide.with(context)
+                        .load(article.getImage())
+                        .into(image);
+            }
+
+            itemView
+                    .setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            newsClickListener.onNewsClick(article);
+                        }
+                    });
+
+//        save
+//                .setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        saveClickListener.onSaveClick(article);
+//                    }
+//                });
+//
+//        share
+//                .setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        shareClickListener.onShareClick(article);
+//                    }
+//                });
         }
     }
 

@@ -8,8 +8,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface Client {
-    @GET("top-headlines")
-    Call<NewsModel> getTopNewsBySource(@Query("sources") String sourceName, @Query("apiKey") String apikey);
+public interface API {
+    @GET("everything")
+    Call<NewsModel> getNewsBySource(@Query("sources") String sourceName, @Query("apiKey") String apiKey, @Query("page") long page);
 
 }
