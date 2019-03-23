@@ -1,0 +1,412 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha3] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha3.aar\64e45f837105e96bcc226143ad399df5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\material-1.1.0-alpha02.aar\bca827888832a4ffcfaa7fc7b884e494\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.paging:paging-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\paging-runtime-2.0.0-rc01.aar\2638e1e7b7f9b0bcecaa16ed719edafd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\recyclerview-1.1.0-alpha01.aar\658c83ba3f7e8300deb45ff107842857\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-login:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.41.0.aar\6ebf446d253f14516b5fda6f966fe0c3\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:21:1-37:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\37f3b5853832d9f712b921c03b5a6dd1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.7.1.aar\e04328fa64cacbdd0c96a7336495db47\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-api-phone-15.0.1.aar\da5cb5e92bfb20f17704da50e20123a9\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-base-15.0.1.aar\8908e168cfa03e3ba1c2c29312758a5f\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-15.0.1.aar\20110c9a583bb2e579943a236dfcd509\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\14cebba7c87764b8c2d02ad1aa59793a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customfont-0.1.0.aar\158fe0abf938c900035a11ee1eb26fea\AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0-alpha01.aar\1f5e7923c480d7d1c0a4e1dea25c8a9f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.test:runner:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\runner-1.1.1.aar\c2065d63bfa8b5832f2624150ac08c36\AndroidManifest.xml:17:1-24:12
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\271f22746b9c090ed454e0ffc17dc509\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-10.0.0.aar\54dabb5c7d6528c37fb50468eae9057c\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\room-runtime-2.0.0-rc01.aar\bb0d4bcc7af4d6c9320fd73c3a1a8cd5\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\rxandroid-2.1.0.aar\0035415ca06d1ce7b7658f2f083c7b6e\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\da1ce4e9855c285b8c47b50c58f22d53\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\02c401bb31533cdc771095d496bc1373\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\ff300825ccf647124a64f2255c1d93b0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\876a2dcdbdfa0c9c01d73901c6dbf8b9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0-alpha02.aar\a3c5f483ad3b614fa23d5fc270f1e479\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\a918bc254ee361c01f687c94c658f8f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3a526605bfa34446d56801f3daa598e3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\511d74508fa6352a36336d019602ccab\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f7b27cedad00c934323f12515b5bb6b4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\e2d492515a038e8ee2b50bb784033aa3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:21:1-53:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\0484834f81979f6118f1eab4ff4b42ad\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.1.aar\b780efbc55c68236862c05602bbe9650\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\1369a1ed541466a541c544e1ed9b7af0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-10.0.0.aar\e240143c3f2e42fa0575a479a186682d\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\d72867f772b1dd3cc02177b070cc7302\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\d37c6dcba7e3a97ee5a361ae5c883f2f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\74c283c0e5e9acd5048ec313aaa26673\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\activity-1.0.0-alpha02.aar\8a24693a86bec59fa6f241d7d428d58a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\c95ea9f39b3ff43e2d3163e2041015e3\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f1ee9991a1502bfc9c05be06e154a053\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.test:monitor:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\monitor-1.1.1.aar\12400c85ff31a29c79b0e5e50ed16d55\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.0-rc01.aar\4f673958da7fe7bbc398c2ee671919b7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.0-rc01.aar\3ccdedabb03775483ef56c8654fb28c5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\5466e5a93bfbba8029e791ba5abfa7ee\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\03e9cb1973fc6eaf6c8a12626b7f6e8f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5b14d50a68b6fd4de84b4493a3d04d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\fa3064334e5ffae4b104d061b01e443e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\a8a6507fab30bdcdc3a7cb50e3e53e20\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\91cb2f0f147313e3ed5dfed1a34b3c27\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\222ea1842eacd95d4022fae907308b76\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\1c28e98f0b3f53a4b1bf07be42d2eb3c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4fcf28c5db74024c6780cc3a5205f165\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.7.1.aar\0ebb84c762cda0412f4df66b378948df\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+	package
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:6:22-64
+application
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:8:5-61:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha3] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha3.aar\64e45f837105e96bcc226143ad399df5\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha3] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha3.aar\64e45f837105e96bcc226143ad399df5\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\material-1.1.0-alpha02.aar\bca827888832a4ffcfaa7fc7b884e494\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\material-1.1.0-alpha02.aar\bca827888832a4ffcfaa7fc7b884e494\AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.android:facebook-login:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.41.0.aar\6ebf446d253f14516b5fda6f966fe0c3\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.41.0.aar\6ebf446d253f14516b5fda6f966fe0c3\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:28:5-35:19
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.7.1.aar\e04328fa64cacbdd0c96a7336495db47\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.7.1.aar\e04328fa64cacbdd0c96a7336495db47\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-15.0.1.aar\20110c9a583bb2e579943a236dfcd509\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-15.0.1.aar\20110c9a583bb2e579943a236dfcd509\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:22:5-26:19
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customfont-0.1.0.aar\158fe0abf938c900035a11ee1eb26fea\AndroidManifest.xml:11:5-14:19
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customfont-0.1.0.aar\158fe0abf938c900035a11ee1eb26fea\AndroidManifest.xml:11:5-14:19
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\271f22746b9c090ed454e0ffc17dc509\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\271f22746b9c090ed454e0ffc17dc509\AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:28:5-51:19
+MERGED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\c95ea9f39b3ff43e2d3163e2041015e3\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\c95ea9f39b3ff43e2d3163e2041015e3\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.7.1.aar\0ebb84c762cda0412f4df66b378948df\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.7.1.aar\0ebb84c762cda0412f4df66b378948df\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:11:9-49
+	android:allowBackup
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:15:9-40
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:10:9-44
+activity#amir.digital.paper.SplashScreen
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:16:9-25:20
+	android:screenOrientation
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:18:13-49
+	android:theme
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:19:13-47
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:17:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:23:27-74
+activity#amir.digital.paper.MainActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:26:9-29:49
+	android:screenOrientation
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:28:13-49
+	android:theme
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:29:13-47
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:27:13-41
+activity#amir.digital.paper.DetailsActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:30:9-33:52
+	android:screenOrientation
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:33:13-49
+	android:parentActivityName
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:32:13-55
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:31:13-44
+activity#amir.digital.paper.LoginActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:34:9-36:52
+	android:screenOrientation
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:36:13-49
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:35:13-42
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:38:9-40:55
+	android:value
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:40:13-52
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:39:13-58
+activity#com.facebook.FacebookActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:42:9-45:48
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:29:9-32:66
+	android:label
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:45:13-45
+	android:configChanges
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:44:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:43:13-57
+activity#com.facebook.CustomTabActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:46:9-57:20
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:34:9-67
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:34:9-67
+	android:exported
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:48:13-36
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:47:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:49:13-56:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:50:17-69
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:50:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:52:17-76
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:52:27-73
+category#android.intent.category.BROWSABLE
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:53:17-78
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:53:27-75
+data
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:55:17-75
+	android:scheme
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:55:23-72
+activity#amir.digital.paper.AboutActivity
+ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:58:9-60:51
+	android:screenOrientation
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:60:13-49
+	android:parentActivityName
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:59:13-55
+	android:name
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml:58:19-48
+uses-sdk
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha3] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha3.aar\64e45f837105e96bcc226143ad399df5\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha3] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha3.aar\64e45f837105e96bcc226143ad399df5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\material-1.1.0-alpha02.aar\bca827888832a4ffcfaa7fc7b884e494\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\material-1.1.0-alpha02.aar\bca827888832a4ffcfaa7fc7b884e494\AndroidManifest.xml:20:5-44
+MERGED from [androidx.paging:paging-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\paging-runtime-2.0.0-rc01.aar\2638e1e7b7f9b0bcecaa16ed719edafd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.paging:paging-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\paging-runtime-2.0.0-rc01.aar\2638e1e7b7f9b0bcecaa16ed719edafd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\recyclerview-1.1.0-alpha01.aar\658c83ba3f7e8300deb45ff107842857\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\recyclerview-1.1.0-alpha01.aar\658c83ba3f7e8300deb45ff107842857\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-login:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.41.0.aar\6ebf446d253f14516b5fda6f966fe0c3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.41.0.aar\6ebf446d253f14516b5fda6f966fe0c3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\37f3b5853832d9f712b921c03b5a6dd1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\37f3b5853832d9f712b921c03b5a6dd1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.7.1.aar\e04328fa64cacbdd0c96a7336495db47\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.7.1.aar\e04328fa64cacbdd0c96a7336495db47\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-api-phone-15.0.1.aar\da5cb5e92bfb20f17704da50e20123a9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-api-phone-15.0.1.aar\da5cb5e92bfb20f17704da50e20123a9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-base-15.0.1.aar\8908e168cfa03e3ba1c2c29312758a5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-base-15.0.1.aar\8908e168cfa03e3ba1c2c29312758a5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-15.0.1.aar\20110c9a583bb2e579943a236dfcd509\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-15.0.1.aar\20110c9a583bb2e579943a236dfcd509\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\14cebba7c87764b8c2d02ad1aa59793a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\14cebba7c87764b8c2d02ad1aa59793a\AndroidManifest.xml:20:5-44
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customfont-0.1.0.aar\158fe0abf938c900035a11ee1eb26fea\AndroidManifest.xml:7:5-9:41
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customfont-0.1.0.aar\158fe0abf938c900035a11ee1eb26fea\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0-alpha01.aar\1f5e7923c480d7d1c0a4e1dea25c8a9f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0-alpha01.aar\1f5e7923c480d7d1c0a4e1dea25c8a9f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.test:runner:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\runner-1.1.1.aar\c2065d63bfa8b5832f2624150ac08c36\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:runner:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\runner-1.1.1.aar\c2065d63bfa8b5832f2624150ac08c36\AndroidManifest.xml:20:5-22:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\271f22746b9c090ed454e0ffc17dc509\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\271f22746b9c090ed454e0ffc17dc509\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-10.0.0.aar\54dabb5c7d6528c37fb50468eae9057c\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-10.0.0.aar\54dabb5c7d6528c37fb50468eae9057c\AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\room-runtime-2.0.0-rc01.aar\bb0d4bcc7af4d6c9320fd73c3a1a8cd5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\room-runtime-2.0.0-rc01.aar\bb0d4bcc7af4d6c9320fd73c3a1a8cd5\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\rxandroid-2.1.0.aar\0035415ca06d1ce7b7658f2f083c7b6e\AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\rxandroid-2.1.0.aar\0035415ca06d1ce7b7658f2f083c7b6e\AndroidManifest.xml:18:5-43
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\da1ce4e9855c285b8c47b50c58f22d53\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\da1ce4e9855c285b8c47b50c58f22d53\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\02c401bb31533cdc771095d496bc1373\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\02c401bb31533cdc771095d496bc1373\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\ff300825ccf647124a64f2255c1d93b0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\ff300825ccf647124a64f2255c1d93b0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\876a2dcdbdfa0c9c01d73901c6dbf8b9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\876a2dcdbdfa0c9c01d73901c6dbf8b9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0-alpha02.aar\a3c5f483ad3b614fa23d5fc270f1e479\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0-alpha02.aar\a3c5f483ad3b614fa23d5fc270f1e479\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\a918bc254ee361c01f687c94c658f8f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\a918bc254ee361c01f687c94c658f8f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3a526605bfa34446d56801f3daa598e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3a526605bfa34446d56801f3daa598e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\511d74508fa6352a36336d019602ccab\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\511d74508fa6352a36336d019602ccab\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f7b27cedad00c934323f12515b5bb6b4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f7b27cedad00c934323f12515b5bb6b4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\e2d492515a038e8ee2b50bb784033aa3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\e2d492515a038e8ee2b50bb784033aa3\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\0484834f81979f6118f1eab4ff4b42ad\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\0484834f81979f6118f1eab4ff4b42ad\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.1.aar\b780efbc55c68236862c05602bbe9650\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.1.aar\b780efbc55c68236862c05602bbe9650\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\1369a1ed541466a541c544e1ed9b7af0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\1369a1ed541466a541c544e1ed9b7af0\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-10.0.0.aar\e240143c3f2e42fa0575a479a186682d\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-10.0.0.aar\e240143c3f2e42fa0575a479a186682d\AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\d72867f772b1dd3cc02177b070cc7302\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\d72867f772b1dd3cc02177b070cc7302\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\d37c6dcba7e3a97ee5a361ae5c883f2f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\d37c6dcba7e3a97ee5a361ae5c883f2f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\74c283c0e5e9acd5048ec313aaa26673\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\74c283c0e5e9acd5048ec313aaa26673\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\activity-1.0.0-alpha02.aar\8a24693a86bec59fa6f241d7d428d58a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\activity-1.0.0-alpha02.aar\8a24693a86bec59fa6f241d7d428d58a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-alpha02] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha02.aar\d45e0f05617e539934de3e26184d4824\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\c95ea9f39b3ff43e2d3163e2041015e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\c95ea9f39b3ff43e2d3163e2041015e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f1ee9991a1502bfc9c05be06e154a053\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f1ee9991a1502bfc9c05be06e154a053\AndroidManifest.xml:20:5-44
+MERGED from [androidx.test:monitor:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\monitor-1.1.1.aar\12400c85ff31a29c79b0e5e50ed16d55\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:monitor:1.1.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\monitor-1.1.1.aar\12400c85ff31a29c79b0e5e50ed16d55\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.0-rc01.aar\4f673958da7fe7bbc398c2ee671919b7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.0-rc01.aar\4f673958da7fe7bbc398c2ee671919b7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.0-rc01.aar\3ccdedabb03775483ef56c8654fb28c5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0-rc01] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.0-rc01.aar\3ccdedabb03775483ef56c8654fb28c5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\5466e5a93bfbba8029e791ba5abfa7ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\5466e5a93bfbba8029e791ba5abfa7ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\03e9cb1973fc6eaf6c8a12626b7f6e8f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\03e9cb1973fc6eaf6c8a12626b7f6e8f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5b14d50a68b6fd4de84b4493a3d04d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5b14d50a68b6fd4de84b4493a3d04d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\fa3064334e5ffae4b104d061b01e443e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\fa3064334e5ffae4b104d061b01e443e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\a8a6507fab30bdcdc3a7cb50e3e53e20\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\a8a6507fab30bdcdc3a7cb50e3e53e20\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\91cb2f0f147313e3ed5dfed1a34b3c27\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\91cb2f0f147313e3ed5dfed1a34b3c27\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\222ea1842eacd95d4022fae907308b76\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\222ea1842eacd95d4022fae907308b76\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\1c28e98f0b3f53a4b1bf07be42d2eb3c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\1c28e98f0b3f53a4b1bf07be42d2eb3c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4fcf28c5db74024c6780cc3a5205f165\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4fcf28c5db74024c6780cc3a5205f165\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.7.1.aar\0ebb84c762cda0412f4df66b378948df\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.7.1.aar\0ebb84c762cda0412f4df66b378948df\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Amir\Documents\Android Stdio\project\DigitalPaper\app\src\main\AndroidManifest.xml
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.41.0.aar\c68aa26324689c8902b66f0ba5964d52\AndroidManifest.xml:33:19-68
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-15.0.1.aar\c219de2c06bc9e9eb9887d5b7ffa4cea\AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-15.0.1.aar\2f975932b9ee4da430b93080ce8ddba7\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-15.0.1.aar\425bf843924d2983985f2821a5ba143d\AndroidManifest.xml:24:13-58
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:40:13-70
+receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:44:9-50:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:45:13-86
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:47:13-49:29
+action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:48:17-95
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.41.0] C:\Users\Amir\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.41.0.aar\af747afb282bae1bb8cde4011aabce04\AndroidManifest.xml:48:25-92
