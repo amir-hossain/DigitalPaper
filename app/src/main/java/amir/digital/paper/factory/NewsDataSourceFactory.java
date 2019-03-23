@@ -1,10 +1,10 @@
 package amir.digital.paper.factory;
 
 import amir.digital.paper.DataSource.NewsDataSource;
-import amir.digital.paper.model.NewsModel;
+import amir.digital.paper.modelAndSchema.NewsModelAndSchema;
 import androidx.paging.DataSource;
 
-public class NewsDataSourceFactory extends DataSource.Factory<Long,NewsModel.Article> {
+public class NewsDataSourceFactory extends DataSource.Factory<Long, NewsModelAndSchema.Article> {
     private String newsSource;
 
     public NewsDataSourceFactory(String newsSource) {
@@ -12,7 +12,7 @@ public class NewsDataSourceFactory extends DataSource.Factory<Long,NewsModel.Art
     }
 
     @Override
-    public DataSource<Long, NewsModel.Article> create() {
+    public DataSource<Long, NewsModelAndSchema.Article> create() {
         return new NewsDataSource(newsSource);
     }
 }

@@ -2,7 +2,9 @@ package amir.digital.paper.adapter;
 
 import android.content.Context;
 
+import amir.digital.paper.schema.Article;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,30 +21,28 @@ import com.bumptech.glide.Glide;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import amir.digital.paper.R;
-import amir.digital.paper.model.NewsModel;
+import amir.digital.paper.modelAndSchema.NewsModelAndSchema;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NewsAdapter extends PagedListAdapter<NewsModel.Article,NewsAdapter.MyViewHolder> {
-    Context context;
-    
+public class NewsAdapter extends PagedListAdapter<NewsModelAndSchema.Article,NewsAdapter.MyViewHolder> {
+    private Context context;
+    private NewsModelAndSchema.Article article;
     private NewsClickListener newsClickListener;
     private SaveClickListener saveClickListener;
     private ShareClickListener shareClickListener;
 
-    private static DiffUtil.ItemCallback<NewsModel.Article> itemCallback=new DiffUtil.ItemCallback<NewsModel.Article>() {
+    private static DiffUtil.ItemCallback<NewsModelAndSchema.Article> itemCallback=new DiffUtil.ItemCallback<NewsModelAndSchema.Article>() {
         @Override
-        public boolean areItemsTheSame(@NonNull NewsModel.Article oldItem, @NonNull NewsModel.Article newItem) {
+        public boolean areItemsTheSame(@NonNull NewsModelAndSchema.Article oldItem, @NonNull NewsModelAndSchema.Article newItem) {
             return oldItem.equals(newItem);
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull NewsModel.Article oldItem, @NonNull NewsModel.Article newItem) {
+        public boolean areContentsTheSame(@NonNull NewsModelAndSchema.Article oldItem, @NonNull NewsModelAndSchema.Article newItem) {
             return oldItem.getUrl().equals(newItem.getUrl());
         }
     };
@@ -68,7 +68,7 @@ public class NewsAdapter extends PagedListAdapter<NewsModel.Article,NewsAdapter.
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        NewsModel.Article article=getItem(position);
+        article=getItem(position);
         holder.bindTo(article);
         
     }
@@ -119,11 +119,11 @@ public class NewsAdapter extends PagedListAdapter<NewsModel.Article,NewsAdapter.
         @BindView(R.id.img_article)
         ImageView image;
 
-//        @BindView(R.id.save)
-//        ImageView save;
-//
-//        @BindView(R.id.share)
-//        ImageView share;
+        @BindView(R.id.save)
+        ImageView save;
+
+        @BindView(R.id.share)
+        ImageView share;
 
 
 
@@ -135,74 +135,87 @@ public class NewsAdapter extends PagedListAdapter<NewsModel.Article,NewsAdapter.
 
         }
 
-        public void bindTo(NewsModel.Article article) {
-            title.setText(article.getTitle());
+        public void bindTo(NewsModelAndSchema.Article article) {
+            if(article!=null){
+                clearColor(title);
+                title.setText(article.getTitle());
 
-            description.setText(article.getDescription());
-            if(article.getAuthor()!=null){
-                author.setText(article.getAuthor());
+                clearColor(description);
+                description.setText(article.getDescription());
+                clearColor(author);
+                if(article.getAuthor()!=null){
+
+                    author.setText(article.getAuthor());
+                }else {
+                    author.setText("Staff Reporter");
+                }
+
+                clearColor(url);
+                url.setText(article.getUrl());
+
+                if (article.getPublishTime() !=null) {
+                    String date = parseDate(article.getPublishTime());
+                    this.date.setText(date);
+                    this.date.setVisibility(View.VISIBLE);
+                }
+
+                clearColor(image);
+                if (article.getImage() != null) {
+
+                    Glide.with(context)
+                            .load(article.getImage())
+                            .into(image);
+                }else {
+                    Glide.with(context)
+                            .load(R.drawable.placeholder)
+                            .into(image);
+                }
+
+                itemView
+                        .setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                newsClickListener.onNewsClick(article);
+                            }
+                        });
+
+                save.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Article article1=new Article();
+                        article1.setArticle(article.getTitle());
+
+                        saveClickListener.onSaveClick(article1);
+                    }
+                });
+
+                share.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        shareClickListener.onShareClick(article);
+                    }
+                });
             }
 
-            url.setText(article.getUrl());
-
-            if (article.getPublishTime() !=null) {
-                String date = parseDate(article.getPublishTime());
-                this.date.setText(date);
-            }
-
-            if (article.getImage() != null) {
-
-                Glide.with(context)
-                        .load(article.getImage())
-                        .into(image);
-            }
-
-            itemView
-                    .setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            newsClickListener.onNewsClick(article);
-                        }
-                    });
-
-//        save
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        saveClickListener.onSaveClick(article);
-//                    }
-//                });
-//
-//        share
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        shareClickListener.onShareClick(article);
-//                    }
-//                });
         }
     }
 
-//    @OnClick(R.id.save)
-//    void save(){
-//
-//    }
-//
-//    @OnClick(R.id.share)
-//    void share(){
-//
-//    }
+    private void clearColor(View v) {
+        v.setBackgroundColor(ContextCompat.getColor(context,android.R.color.white));
+    }
+
+
 
     public interface NewsClickListener {
-        void onNewsClick(NewsModel.Article article);
+        void onNewsClick(NewsModelAndSchema.Article article);
     }
 
     public interface SaveClickListener {
-        void onSaveClick(NewsModel.Article article);
+        void onSaveClick(Article article);
     }
 
     public interface ShareClickListener {
-        void onShareClick(NewsModel.Article article);
+        void onShareClick(NewsModelAndSchema.Article article);
     }
 
 }
